@@ -1,3 +1,5 @@
+const gifContainer = document.querySelector("#gifContainer");
+
 // Select the HTML element with the ID "add-btn" and add a click event listener
 document
   .querySelector("#add-btn")
@@ -32,8 +34,16 @@ document
 
 // Function to display the GIF in the HTML document
 function displayGif(gifUrl) {
-  const gifContainer = document.querySelector("#gifContainer");
   const img = document.createElement("img"); // Create an img element
   img.src = `${gifUrl}`; // Set the src attribute with the GIF URL
   gifContainer.append(img); // Append the img element to the GIF container
+}
+
+document.querySelector("#remove-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  removeAllGifs();
+});
+
+function removeAllGifs() {
+  gifContainer.innerHTML = "";
 }
