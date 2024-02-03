@@ -34,9 +34,13 @@ document
 
 // Function to display the GIF in the HTML document
 function displayGif(gifUrl) {
+  const div = document.createElement("div");
   const img = document.createElement("img"); // Create an img element
   img.src = `${gifUrl}`; // Set the src attribute with the GIF URL
-  gifContainer.append(img); // Append the img element to the GIF container
+  img.classList.add("img-fluid");
+  div.classList.add("col-12", "col-md-6", "col-lg-4", "mb-3");
+  div.append(img);
+  gifContainer.append(div); // Append the img element to the GIF container
 }
 
 document.querySelector("#remove-btn").addEventListener("click", function (e) {

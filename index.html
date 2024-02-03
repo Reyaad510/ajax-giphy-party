@@ -9,14 +9,17 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form>
-      <input type="text" id="search" placeholder="Enter a search term" />
-      <button class="btn btn-success" id="add-btn">Add a Gif</button>
-      <button class="btn btn-danger" id="remove-btn">Remove All Gifs</button>
-    </form>
-    <div id="gifContainer"></div>
+    <div class="container">
+      <form>
+        <input type="text" id="search" placeholder="Enter a search term" />
+        <button class="btn btn-success" id="add-btn">Add a Gif</button>
+        <button class="btn btn-danger" id="remove-btn">Remove All Gifs</button>
+      </form>
+      <div id="gifContainer" class="row"></div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.js"></script>
     <script src="app.js"></script>
